@@ -16,6 +16,7 @@ class App extends Component {
     constructor() {
         super();
         this.locations = [...locations];
+        this.setLocations = this.setLocations.bind(this);
     }
 
     setLocations() {
