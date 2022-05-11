@@ -18,11 +18,15 @@ class App extends Component {
         this.locations = [...locations];
     }
 
+    setLocations(locations) {
+        this.setState({locations});
+    }
+
     render() {
         return (
             <div className="App">
                 <h8k-navbar header={title}></h8k-navbar>
-                <Navigation locations={this.locations}/>
+                <Navigation locations={this.locations} setLocations={this.handler}/>
             </div>
         );
     }
