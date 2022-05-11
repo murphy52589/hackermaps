@@ -1,4 +1,4 @@
-# Hackermaps
+# Hackermaps in React class based components
 
 ## Environment 
 
