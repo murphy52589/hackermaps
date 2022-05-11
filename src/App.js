@@ -18,7 +18,7 @@ class App extends Component {
         this.locations = [...locations];
     }
 
-    setLocations(locations) {
+    setLocations() {
         this.setState({locations});
     }
 
@@ -26,7 +26,7 @@ class App extends Component {
         return (
             <div className="App">
                 <h8k-navbar header={title}></h8k-navbar>
-                <Navigation locations={this.locations} setLocations={this.handler}/>
+                <Navigation locations={this.locations} onLocationsChange={this.setLocations}/>
             </div>
         );
     }

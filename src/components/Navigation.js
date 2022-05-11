@@ -32,7 +32,7 @@ export default class Navigation extends Component {
         let data = allLocations[index];
         allLocations[index] = allLocations[index + 1];
         allLocations[index + 1] = data;
-        this.props.setLocations(allLocations);
+        this.props.onLocationsChange(allLocations);
     }
 
     moveLocationDown(index) {
@@ -40,7 +40,7 @@ export default class Navigation extends Component {
         let data = allLocations[index];
         allLocations[index] = allLocations[index - 1];
         allLocations[index - 1] = data;
-        this.props.setLocations(allLocations);
+        this.props.onLocationsChange(allLocations);
     }
 
     render() {
