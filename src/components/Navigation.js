@@ -28,18 +28,22 @@ export default class Navigation extends Component {
     }
 
     moveLocationUp(index) {
+        console.log(`up clicked ${index}`);
         let allLocations = [];
         let data = allLocations[index];
         allLocations[index] = allLocations[index + 1];
         allLocations[index + 1] = data;
+        console.log(allLocations);
         this.props.onLocationsChange(allLocations);
     }
 
     moveLocationDown(index) {
+        console.log(`down clicked ${index}`);
         let allLocations = [];
         let data = allLocations[index];
         allLocations[index] = allLocations[index - 1];
         allLocations[index - 1] = data;
+        console.log(allLocations);
         this.props.onLocationsChange(allLocations);
     }
 

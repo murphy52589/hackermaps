@@ -15,6 +15,7 @@ class App extends Component {
 
     constructor() {
         super();
+        this.state = locations;
         this.locations = [...locations];
         this.setLocations = this.setLocations.bind(this);
     }
@@ -27,7 +28,7 @@ class App extends Component {
         return (
             <div className="App">
                 <h8k-navbar header={title}></h8k-navbar>
-                <Navigation locations={this.locations} onLocationsChange={this.setLocations}/>
+                <Navigation locations={this.state.locations} onLocationsChange={this.setLocations}/>
             </div>
         );
     }
